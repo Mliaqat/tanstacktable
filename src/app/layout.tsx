@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex">
+          <div className="w-[20%] 2xl:w-[15%] bg-white h-[100dvh] m-4 border rounded-lg px-5 py-3 shadow-md sticky top-3">
+            <div className="grid gap-3">
+              <Link href="/" className="border block rounded p-1.5">
+                {" "}
+                Header Group
+              </Link>
+              <Link href="/filter-table" className="border block rounded p-1.5">
+                {" "}
+                Filter Table
+              </Link>
+            </div>
+          </div>
+          <div className="grow p-3">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
