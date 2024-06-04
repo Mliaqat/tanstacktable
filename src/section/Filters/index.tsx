@@ -208,14 +208,7 @@ const FilterTable = () => {
                     <th key={header.id} colSpan={header.colSpan}>
                       {header.isPlaceholder ? null : (
                         <>
-                          <div
-                            {...{
-                              className: header.column.getCanSort()
-                                ? "cursor-pointer select-none text-left"
-                                : "",
-                              onClick: header.column.getToggleSortingHandler(),
-                            }}
-                          >
+                          <div className="flex gap-1">
                             {flexRender(
                               header.column.columnDef.header,
                               header.getContext()
