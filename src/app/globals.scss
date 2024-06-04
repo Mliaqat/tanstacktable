@@ -62,4 +62,10 @@ td:last-child {
   padding-right: 1.5rem;
 }
 
-
+.table-container {
+  border: 1px solid lightgray;
+  overflow-x: scroll;
+  width: 100%;
+  max-width: 1300px;
+  position: relative;
+}

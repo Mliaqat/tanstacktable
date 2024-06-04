@@ -29,6 +29,17 @@ export default function RootLayout({
                 {" "}
                 Filter Table
               </Link>
+              <Link href="/column-dnd" className="border block rounded p-1.5">
+                {" "}
+                Column Dnd
+              </Link>
+              <Link
+                href="/sticky-column"
+                className="border block rounded p-1.5"
+              >
+                {" "}
+                Sticky Column
+              </Link>
             </div>
           </div>
           <div className="grow p-3">{children}</div>
